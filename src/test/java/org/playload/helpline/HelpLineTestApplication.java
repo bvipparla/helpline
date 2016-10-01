@@ -15,8 +15,8 @@ public class HelpLineTestApplication {
 	}
 
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(HelpLineTestApplication.class).properties(
-				"server.port=9999", "security.basic.enabled=false").run(args);
+		new SpringApplicationBuilder(HelpLineTestApplication.class)
+				.properties("server.port=9999", "security.basic.enabled=false").run(args);
 	}
 
 }

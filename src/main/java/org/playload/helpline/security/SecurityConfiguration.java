@@ -18,18 +18,14 @@ public class SecurityConfiguration {
 	protected static class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 		@Override
 		protected void configure(HttpSecurity http) throws Exception {
-			// @formatter:off
-			http.logout().logoutSuccessUrl("/").and().httpBasic().and().authorizeRequests().antMatchers("/index.html", "/home.html", "/login.html", "/")
-					.permitAll().antMatchers("/js/**", "/modules/**", "/scripts/**", "/css/**").permitAll().anyRequest()
-					.authenticated().and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());;
-			// @formatter:on
-			;
+			http
+			.logout().logoutSuccessUrl("/")
+			.and().httpBasic()
+			.and().authorizeRequests()
+			.antMatchers("/index.html", "/home.html", "/login.html", "/").permitAll()
+			.antMatchers("/js/**", "/modules/**", "/scripts/**", "/css/**").permitAll()
+			.anyRequest().authenticated()
+			.and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
 		}
 	}
-
-	/*private static CsrfTokenRepository csrfTokenRepository() {
-		HttpSessionCsrfTokenRepository repository = new HttpSessionCsrfTokenRepository();
-		repository.setHeaderName("X-XSRF-TOKEN");
-		return repository;
-	}*/
 }
