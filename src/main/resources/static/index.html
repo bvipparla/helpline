@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="HelplineApplication">
+
+<head>
+<meta charset="utf-8" />
+<link href="css/angular-bootstrap.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" /> -->
+</head>
+
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="col-xs-offset-2 col-xs-8">
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
+	<script src="js/angular-bootstrap.js" type="text/javascript"></script>
+	<script src="scripts/app.js"></script>
+	<script src="modules/authentication/services.js"></script>
+	<script src="modules/authentication/controllers.js"></script>
+	<script src="modules/home/controllers.js"></script>
+</body>
+
+</html>
