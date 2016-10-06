@@ -59,6 +59,10 @@
 			<version>2.0.0</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
 	</dependencies>
 
 	<properties>
@@ -167,7 +171,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<fork>true</fork>
+<!--
 					<executable>C:\cmc\vbc\jdk-1.8.92\bin\javac.exe</executable>
+-->
 				</configuration>
 			</plugin>
 		</plugins>
